@@ -1,0 +1,31 @@
+{
+  "name": "api-camera",
+  "version": "0.0.01",
+  "description": "An API for interact with the camera of Raspberry Pi",
+  "main": "src/server.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon .",
+    "lint": "eslint --ext .js .",
+    "purge": "rm -fr ./logs && rm -fr ./media/*jpg"
+  },
+  "keywords": [
+    "server",
+    "API",
+    "camera"
+  ],
+  "author": "Dídac García",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "log4js": "^6.1.2",
+    "nodemon": "^2.0.2",
+    "pi-camera-connect": "^0.3.0",
+    "serve-favicon": "^2.5.0"
+  }
+}
