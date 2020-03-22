@@ -23,7 +23,7 @@ module.exports = async () => {
 
 		fs.writeFileSync(mediaDestination, image);
 
-		return `Your picture is: ${nameOfPicture}`;
+		return nameOfPicture;
 	} catch (e) {
 		return e;
 	}

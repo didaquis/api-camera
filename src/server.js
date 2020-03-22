@@ -19,6 +19,8 @@ const initAPI = () => {
 	app.use(cors({ credentials: true }));
 	app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
+	app.use('/', express.static(__dirname + '/public/media')); /* Allows serve the media files on the root of server */
+
 	const ApiDomain = '/api-camera';
 	const routes = require('./routes');
 	app.use(ApiDomain, routes);
