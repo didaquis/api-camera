@@ -19,7 +19,7 @@ const initAPI = () => {
 	app.use(cors({ credentials: true }));
 	app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
-	app.use('/', express.static(__dirname + '/public/media')); /* Allows serve the media files on the root of server */
+	app.use('/', express.static(__dirname + '/public/media')); /* It allows serve the media files on the root of server */
 
 	const ApiDomain = '/api-camera';
 	const routes = require('./routes');
@@ -29,7 +29,7 @@ const initAPI = () => {
 
 	const root = /\//;
 	app.use(root, (req, res) => {
-		res.status(statusCodeOk).json(success({ salute: 'Welcome to the API camera!', availableEnpoints: availableEnpoints }));
+		res.status(statusCodeOk).json(success({ salute: 'Welcome to the API camera!', availableEnpoints: availableEnpoints, instructions: 'When calling the endpoint to take a photo, the server will give you the photo identifier. You can make a request to the server to obtain the file: http[s]://${server-ip}:${server-port}/${photo-id}' }));
 	});
 
 	app.use((req, res) => {
