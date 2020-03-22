@@ -1,15 +1,30 @@
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
+
+const { StillCamera } = require('pi-camera-connect');
+
+const { nameOfContentMedia } = require('../../utils/logic-helpers');
+
 /**
  * Take image logic
+ * @async
  * @return {String}
  */
-module.exports = async (stillCamera, fs, mediaFolder) => {
+module.exports = async () => {
+	try {
+		const stillCamera = new StillCamera();
 
-	const image = await stillCamera.takeImage();
+		const nameOfPicture = `${nameOfContentMedia()}.jpg`;
+		const mediaDestination = path.join(process.cwd(), `src/public/media/${nameOfPicture}`);
 
-	await fs.writeFile(`${mediaFolder}/still-image.jpg`, image);
-	
+		const image = await stillCamera.takeImage();
 
-	return 'shoot';
+		fs.writeFileSync(mediaDestination, image);
+
+		return `Your picture is: ${nameOfPicture}`;
+	} catch (e) {
+		return e;
+	}
 };

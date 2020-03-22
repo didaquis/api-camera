@@ -10,11 +10,6 @@ const { getListOfIPV4Address } = require('./utils/server-helpers');
 const { success, fail, statusCodeOk, statusCode404, getApiEndpoints } = require('./utils/router-helpers');
 const { enviromentConfiguration } = require('./appConfig');
 
-// const Buzzer = require('./lib/Buzzer');
-// const buzzer = new Buzzer(enviromentConfiguration.gpio);
-
-//buzzer.init();
-
 /**
  * Init Express server
  */
@@ -50,7 +45,6 @@ initAPI();
 // Managing application shutdown
 process.on('SIGINT', () => {
 	logger.info('Stopping application...');
-	//buzzer.kill();
 	endLogger();
 	process.exit();
 });

@@ -1,6 +1,6 @@
 {
   "name": "api-camera",
-  "version": "0.0.01",
+  "version": "0.0.02",
   "description": "An API for interact with the camera of Raspberry Pi",
   "main": "src/server.js",
   "engines": {
@@ -10,7 +10,7 @@
     "start": "node .",
     "dev": "nodemon .",
     "lint": "eslint --ext .js .",
-    "purge": "rm -fr ./logs && rm -fr ./media/*jpg"
+    "purge": "rm -fr ./logs && rm -fr ./src/public/media/*.jpg"
   },
   "keywords": [
     "server",
