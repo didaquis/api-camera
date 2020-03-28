@@ -1,6 +1,6 @@
 {
   "name": "api-camera",
-  "version": "0.0.04",
+  "version": "0.0.05",
   "description": "An API for interact with the camera of Raspberry Pi",
   "main": "src/server.js",
   "engines": {

@@ -1,6 +1,6 @@
 # API-camera
 
-This is a Node.js API for interact with the official Raspberry Pi camera.  
+This is a Node.js API to interact with the official Raspberry Pi camera.  
 
 Example of use: `http://192.168.1.35:14159/api-camera/take-image` (of course, you need to use the correct IP and port).  
 Make a request to the API root to get the complete documentation.: `http://192.168.1.35:14159` (of course, you need to use the correct IP and port).  
