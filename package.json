@@ -22,7 +22,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.20.0",
+    "express": "^4.21.0",
     "log4js": "^6.4.0",
     "nodemon": "^2.0.20",
     "pi-camera-connect": "^0.3.0",
